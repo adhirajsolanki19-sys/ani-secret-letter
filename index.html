@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Little Letter For Ani 💌</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #ffe4ec, #fff0f5, #ffd6e5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 25px 0;
+    color: #9b4165;
+}
+
+.container {
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    padding: 30px 22px;
+    background: rgba(255,255,255,0.75);
+    border: 1px solid white;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px #e99ab855;
+    position: relative;
+    z-index: 2;
+}
+
+.tag {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #c47a98;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #aa6b84;
+    margin-bottom: 28px;
+}
+
+/* Envelope */
+
+.envelope {
+    width: 180px;
+    height: 120px;
+    background: #f4a9c4;
+    margin: 35px auto;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.4s;
+}
+
+.envelope:hover {
+    transform: translateY(-7px);
+}
+
+.envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-top: 75px solid #ed88ad;
+    transform-origin: top;
+    transition: transform 0.6s;
+    z-index: 3;
+}
+
+.envelope::after {
+    content: "♥";
+    position: absolute;
+    top: 48px;
+    left: 76px;
+    font-size: 30px;
+    color: white;
+    z-index: 4;
+}
+
+.envelope.open::before {
+    transform: rotateX(180deg);
+}
+
+.letter {
+    position: absolute;
+    background: #fffafd;
+    width: 155px;
+    height: 100px;
+    left: 12px;
+    bottom: 5px;
+    padding: 15px 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: all 0.8s;
+    z-index: 2;
+}
+
+.envelope.open .letter {
+    opacity: 1;
+    transform: translateY(-90px);
+}
+
+button {
+    border: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: #e982aa;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px #e982aa55;
+}
+
+button:hover {
+    background: #d95e91;
+    transform: scale(1.05);
+}
+
+/* Main letter */
+
+#message {
+    display: none;
+    margin-top: 25px;
+    line-height: 1.9;
+    font-size: 15px;
+    text-align: left;
+    animation: fadeIn 1s ease;
+}
+
+#message h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c65d87;
+}
+
+#message p {
+    margin-bottom: 15px;
+}
+
+.signature {
+    text-align: center;
+    margin-top: 20px;
+    color: #d16b94;
+    font-style: italic;
+}
+
+#surprise {
+    display: none;
+    margin-top: 25px;
+    animation: fadeIn 1s ease;
+}
+
+#surprise h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.footer {
+    margin-top: 28px;
+    font-size: 12px;
+    color: #c47a98;
+}
+
+/* Floating 🥰 emojis */
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    font-size: 25px;
+    animation: float 7s linear forwards;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:400px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    .container {
+        padding: 25px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="tag">A LITTLE SURPRISE ✨</div>
+
+    <h1>Hey, Ani! 💗</h1>
+
+    <p class="subtitle">
+        Someone has a little something for you...
+    </p>
+
+    <div class="envelope" id="envelope"
+         onclick="openLetter()">
+
+        <div class="letter">
+            A little letter<br>
+            Just for you 💌
+        </div>
+
+    </div>
+
+    <p id="hint">Tap the envelope to open it ♡</p>
+
+    <div id="message">
+
+        <h2>A Letter For You 💌</h2>
+
+        <p>Hi Ani,</p>
+
+        <p>
+        I always liked you since day one.
+        It's just a small gesture towards you
+        as I'm very far away.
+        </p>
+
+        <p>
+        Why do I like you so much?
+        Should I open up to you achhe se?
+        </p>
+
+        <p>
+        You are the person who makes me feel
+        at home, and I would do anything for you.
+        It's just a feeling that I won't find
+        in any other person.
+        </p>
+
+        <p>
+        When I see you, I get a feeling of
+        ENDGAME, and it's rare, to be honest.
+        I just love how cute, bold and pretty you are.
+        </p>
+
+        <p>
+        Kabhi-kabhi galti kar deti ho,
+        par okay hai, darling. ♡
+        </p>
+
+        <p>
+        It's fun to watch your different sides,
+        how funny, goofy and weird you are
+        at the same time. It makes you
+        even more attractive to me.
+        </p>
+
+        <p>
+        I just don't feel like giving up on you.
+        I have always been a yearner for you,
+        and yeah, I would love it if anything
+        positive happens between us.
+        </p>
+
+        <div class="signature">
+            With a little extra care... ♡
+        </div>
+
+        <br>
+
+        <button onclick="showSurprise()">
+            One last thing... 🎀
+        </button>
+
+    </div>
+
+    <div id="surprise">
+
+        <h2>You're special, Ani! 🥰</h2>
+
+        <p>
+        No matter what happens,
+        I hope this brings a little smile
+        to your face. 🌷
+        </p>
+
+        <br>
+
+        <p>Sending you lots of virtual hugs! 💗</p>
+
+    </div>
+
+    <div class="footer">
+        Made with a little extra care 🌸
+    </div>
+
+</div>
+
+<script>
+
+function openLetter() {
+
+    const envelope = document.getElementById("envelope");
+    const message = document.getElementById("message");
+    const hint = document.getElementById("hint");
+
+    if (envelope.classList.contains("open")) return;
+
+    envelope.classList.add("open");
+    hint.style.display = "none";
+
+    setTimeout(() => {
+        message.style.display = "block";
+    }, 900);
+
+}
+
+function showSurprise() {
+
+    const surprise = document.getElementById("surprise");
+
+    surprise.style.display = "block";
+
+    surprise.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    });
+
+}
+
+// Floating 🥰 emojis
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+    heart.innerHTML = "🥰";
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 10000);
+
+}
+
+setInterval(createHeart, 600);
+
+</script>
+
+</body>
+</html>
