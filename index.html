@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>A Little Letter For Ani 💌</title>
 
 <style>
@@ -15,14 +15,14 @@
 
 body {
     font-family: Georgia, serif;
-    background: linear-gradient(135deg, #ffe4ec, #fff0f5, #ffd6e5);
+    background: linear-gradient(135deg, #c5e6ff, #eaf6ff, #a9d5ff);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
     padding: 25px 0;
-    color: #9b4165;
+    color: #315b89;
 }
 
 .container {
@@ -30,10 +30,10 @@ body {
     max-width: 450px;
     text-align: center;
     padding: 30px 22px;
-    background: rgba(255,255,255,0.75);
+    background: rgba(255,255,255,0.78);
     border: 1px solid white;
     border-radius: 25px;
-    box-shadow: 0 10px 40px #e99ab855;
+    box-shadow: 0 10px 40px #75b9ed55;
     position: relative;
     z-index: 2;
 }
@@ -41,7 +41,7 @@ body {
 .tag {
     font-size: 12px;
     letter-spacing: 3px;
-    color: #c47a98;
+    color: #6499c8;
     margin-bottom: 18px;
 }
 
@@ -52,8 +52,27 @@ h1 {
 
 .subtitle {
     font-size: 14px;
-    color: #aa6b84;
-    margin-bottom: 28px;
+    color: #638bb3;
+    margin-bottom: 20px;
+}
+
+/* Cute cat */
+
+.cat {
+    font-size: 85px;
+    margin: 5px auto 0;
+    animation: catFloat 3s ease-in-out infinite;
+}
+
+.cat-caption {
+    font-size: 13px;
+    color: #6499c8;
+    margin-bottom: 8px;
+}
+
+@keyframes catFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
 }
 
 /* Envelope */
@@ -61,7 +80,7 @@ h1 {
 .envelope {
     width: 180px;
     height: 120px;
-    background: #f4a9c4;
+    background: #9acdf5;
     margin: 35px auto;
     position: relative;
     cursor: pointer;
@@ -80,7 +99,7 @@ h1 {
     left: 0;
     border-left: 90px solid transparent;
     border-right: 90px solid transparent;
-    border-top: 75px solid #ed88ad;
+    border-top: 75px solid #70b5ed;
     transform-origin: top;
     transition: transform 0.6s;
     z-index: 3;
@@ -102,7 +121,7 @@ h1 {
 
 .letter {
     position: absolute;
-    background: #fffafd;
+    background: #fff;
     width: 155px;
     height: 100px;
     left: 12px;
@@ -123,16 +142,16 @@ button {
     border: none;
     padding: 13px 25px;
     border-radius: 30px;
-    background: #e982aa;
+    background: #75b6eb;
     color: white;
     font-size: 15px;
     cursor: pointer;
     transition: 0.3s;
-    box-shadow: 0 5px 15px #e982aa55;
+    box-shadow: 0 5px 15px #75b6eb55;
 }
 
 button:hover {
-    background: #d95e91;
+    background: #4d98d5;
     transform: scale(1.05);
 }
 
@@ -150,7 +169,7 @@ button:hover {
 #message h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #c65d87;
+    color: #528fc5;
 }
 
 #message p {
@@ -160,7 +179,7 @@ button:hover {
 .signature {
     text-align: center;
     margin-top: 20px;
-    color: #d16b94;
+    color: #528fc5;
     font-style: italic;
 }
 
@@ -178,7 +197,7 @@ button:hover {
 .footer {
     margin-top: 28px;
     font-size: 12px;
-    color: #c47a98;
+    color: #6499c8;
 }
 
 /* Floating 🥰 emojis */
@@ -236,11 +255,14 @@ button:hover {
 
     <div class="tag">A LITTLE SURPRISE ✨</div>
 
-    <h1>Hey, Ani! 💗</h1>
+    <h1>Hey, Ani! 💙</h1>
 
     <p class="subtitle">
         Someone has a little something for you...
     </p>
+
+    <div class="cat">🐱💌</div>
+    <p class="cat-caption">A little letter, just for you ♡</p>
 
     <div class="envelope" id="envelope"
          onclick="openLetter()">
@@ -261,46 +283,38 @@ button:hover {
         <p>Hi Ani,</p>
 
         <p>
-        I always liked you since day one.
-        It's just a small gesture towards you
-        as I'm very far away.
+        I hope this small gesture from me will make you happy
+        as I'm very far away :(
         </p>
 
         <p>
-        Why do I like you so much?
-        Should I open up to you achhe se?
+        I just wanna tell you how important you are to me
+        and always will be. Your presence makes me calm
+        and helps me focus on my life. I always liked you
+        since day 1.
         </p>
 
         <p>
-        You are the person who makes me feel
-        at home, and I would do anything for you.
-        It's just a feeling that I won't find
-        in any other person.
+        You are the person who makes me feel like home
+        and I would do anything for you. Whenever I see you
+        or get a thought of you I feel like THE ENDGAME
+        and it's rare tbh. I love how cute, bold and pretty you are.
         </p>
 
         <p>
-        When I see you, I get a feeling of
-        ENDGAME, and it's rare, to be honest.
-        I just love how cute, bold and pretty you are.
+        Kabi kabi galti kar deti hai par okay hai darling ♡
         </p>
 
         <p>
-        Kabhi-kabhi galti kar deti ho,
-        par okay hai, darling. ♡
-        </p>
-
-        <p>
-        It's fun to watch your different sides,
-        how funny, goofy and weird you are
-        at the same time. It makes you
-        even more attractive to me.
+        It's fun to watch your different sides like how funny,
+        goofy and weird you are at the same time.
+        It makes you even more attractive to me.
         </p>
 
         <p>
         I just don't feel like giving up on you.
-        I have always been a yearner for you,
-        and yeah, I would love it if anything
-        positive happens between us.
+        I have always been a yearner for you and to be with you
+        is the greatest thing I can experience in my life &lt;3
         </p>
 
         <div class="signature">
@@ -327,12 +341,12 @@ button:hover {
 
         <br>
 
-        <p>Sending you lots of virtual hugs! 💗</p>
+        <p>Sending you lots of virtual hugs! 💙</p>
 
     </div>
 
     <div class="footer">
-        Made with a little extra care 🌸
+        Made with a little extra care ☁️
     </div>
 
 </div>
